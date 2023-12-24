@@ -1,0 +1,174 @@
+body{
+    display: grid;
+    margin: 8px;
+    background-image: url('img/pexels-karolina-grabowska-4466492.jpg');
+    background-size: cover;
+}
+#productos-container {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    background-image: url('img/pexels-karolina-grabowska-4466492.jpg');
+    padding: 20px;
+}
+
+.producto-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.producto-card img {
+    width: 100%; 
+    height: auto;
+    border-radius: 4px;
+    object-fit: contain; 
+    max-height: 200px; 
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    #productos-container {
+        grid-template-columns: repeat(2,1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    #productos-container {
+        grid-template-columns: 1fr;
+    }
+}
+.producto-card h3,.producto-card p {
+    margin: 10px 0;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#login-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#login-container input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#login-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#carrito-container {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(142, 202, 142);
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#carrito-container h2 {
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+#items-carrito div {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+#items-carrito h3 {
+    margin: 0;
+    color: #555;
+}
+
+#items-carrito p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#boton-borrar-carrito {
+    background-color: #dc3545; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    margin-top: 20px; 
+    cursor: pointer;
+}
+
+#boton-borrar-carrito:hover {
+    background-color: #67595a;
+}
+
+#login-container button:hover {
+    background-color: #45a049;
+}
+
+#container-busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    gap: 10px; 
+}
+
+#container-busqueda input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#container-busqueda button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#container-busqueda button:hover {
+    background-color: #45a049;
+}
+.cerrar-carrito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.cerrar-carrito:hover {
+    color: #dc3545;
+}
